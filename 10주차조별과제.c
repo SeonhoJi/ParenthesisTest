@@ -66,20 +66,17 @@ int check_matching(const char* in) {
 	return 1;
 }
 int main(void) {
-	char* p = "(()())";
+	char stnc[100];
+	printf("괄호를 검사하기 위한 문자열을 입력하세요\n");
+	gets(stnc, 100);
+	char* p = stnc;
+
+
 	if (check_matching(p) == 1)
-		printf("%s 괄호검사성공\n", p);
+		printf("%s Yes\n", p);
 	else
 	{
-		printf("%s 괄호검사실패\n", p);
+		printf("%s No\n", p);
 	}
-		
-
-
-	char* a = "()(()";
-	if (check_matching(a) == 1)
-		printf("%s 괄호검사성공\n", a);
-	else
-		printf("%s 괄호검사실패\n", a);
 
 }
